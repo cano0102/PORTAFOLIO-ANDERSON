@@ -8,6 +8,24 @@
       "tecnologias": ["CSS","JavaScript","HTML"],
       "link" :"https://etherium-game.vercel.app/",
       "linkVerCodigo" : "https://github.com/BrandonAlexisDev22/Etherium-Game"
+    },
+        {
+
+      "id" : "1",
+      "titulo" : "Etherium Game ",
+    "descripcion": "(Primera version) Videojuego RPG por turnos desarrollado por un grupo de estudiantes para participar en una feria académica, donde los jugadores exploran mapas, combaten enemigos y mejoran sus personajes en un mundo de fantasía.",
+      "tecnologias": ["CSS","JavaScript","HTML"],
+      "link" :"https://etherium-game.vercel.app/",
+      "linkVerCodigo" : "https://github.com/BrandonAlexisDev22/Etherium-Game"
+    },
+        {
+
+      "id" : "1",
+      "titulo" : "Etherium Game ",
+    "descripcion": "(Primera version) Videojuego RPG por turnos desarrollado por un grupo de estudiantes para participar en una feria académica, donde los jugadores exploran mapas, combaten enemigos y mejoran sus personajes en un mundo de fantasía.",
+      "tecnologias": ["CSS","JavaScript","HTML"],
+      "link" :"https://etherium-game.vercel.app/",
+      "linkVerCodigo" : "https://github.com/BrandonAlexisDev22/Etherium-Game"
     }
     
   ]
