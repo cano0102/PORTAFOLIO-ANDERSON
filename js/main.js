@@ -87,36 +87,38 @@ function mostrarProyectos(imagenes) {
     });
 }
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const gmail = document.querySelector(".gmail");
+    if (gmail) {
+        gmail.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const copiarGmail = "canoanderson201@gmail.com";
+
+            navigator.clipboard.writeText(copiarGmail).then(() => {
+                let toast = document.querySelector(".toast");
+                
+                if (toast) {
+                    toast.classList.add("show");
+
+                    setTimeout(() => {
+                        toast.classList.remove("show");
+                    }, 1500);
+                }
+
+                console.log("Correo copiado correctamente ✅");
+            }).catch(err => {
+                console.error("Error al copiar:", err);
+            });
+        });
+    } else {
+        console.error("No se encontró el elemento .gmail");
+    }
+
+});
+
 imagesConJS();
-
-
-
-
-const gmail = document.querySelector(".gmail")
-
-
-gmail.addEventListener("click" , function (event) {
-    event.preventDefault()
-     
-    const copiarGmail = "canoanderson201@gmail.com"
-
-    navigator.clipboard.writeText(copiarGmail).then(() =>{
-        let toast  = document.querySelector(".toast")
-        toast.classList.add("show")
-
-        setTimeout(() =>{
-           toast.classList.remove("show")
-        },1500)
-    })
-
-})
-
-
-
-
-
-
-
 
 
 

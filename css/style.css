@@ -1106,7 +1106,6 @@ textarea {
   visibility: visible;
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  visibility: hidden;
 
 }
 
@@ -1123,6 +1122,15 @@ textarea {
         font-size: 16px;
         gap: 20px;
     }
+
+    .toast.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: hidden;
+
+}
+
 }
 
 /* ===== MEDIA QUERIES PARA RESPONSIVE ===== */
@@ -1148,6 +1156,15 @@ textarea {
     .menu a {
         font-size: 14px;
     }
+
+    .toast.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: hidden;
+
+}
+
 }
 
 /* Tablets pequeñas (481px - 768px) */
@@ -1316,6 +1333,15 @@ textarea {
     textarea {
         width: 98%;
     }
+
+    .toast.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: hidden;
+
+}
+
 }
 
 /* Móviles (320px - 480px) */
@@ -2486,3 +2512,11 @@ body {
   line-height: 1.5;
   opacity: 0.9;
 }
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  
+}
+
