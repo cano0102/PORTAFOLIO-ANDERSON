@@ -55,6 +55,11 @@ function mostrarProyectos(imagenes) {
          verptoyecto.href =proyecto.linkVerCodigo
          verptoyecto.textContent = "Ver codigo"
          verptoyecto.className = ("ver-codigo")
+        // opcional: abrir en nueva pestaña
+         verptoyecto.target = "_blank";
+
+         // opcional: seguridad
+         verptoyecto.rel = "noopener noreferrer";
          buttos.appendChild(verptoyecto)
 
 
