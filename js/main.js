@@ -62,6 +62,11 @@ function mostrarProyectos(imagenes) {
          verPry.href =proyecto.link
          verPry.textContent = "Ver proyecto"
          verPry.className = ("ver-proyecto")
+         // opcional: abrir en nueva pestaña
+         verPry.target = "_blank";
+
+         // opcional: seguridad
+         verPry.rel = "noopener noreferrer";
          buttos.appendChild(verPry)
 
 
