@@ -586,7 +586,7 @@ Estilos De Descripcion Y Nombres */
     flex-direction: column;
 }
 
-.iconos-css{
+.iconos-type{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -595,9 +595,17 @@ Estilos De Descripcion Y Nombres */
   color: rgb(2, 129, 255);
     box-shadow: 0 0 10px rgb(2, 129, 255), 0 0 10px rgb(2, 129, 255);
       flex-direction: column;
+
+    svg {
+
+        fill:  #3178C6;
+        width: 90px;
+        height: 90px;
+       
+    }
 }
 
-.iconos-html{
+.iconos-git{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -619,14 +627,14 @@ Estilos De Descripcion Y Nombres */
   flex-direction: column;
 }
 
-.iconos-bootstrap{
+.iconos-node{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 80px;
   border-radius: 20px;
-  color: rgb(202, 4, 212);
-  box-shadow: 0 0 10px rgb(202, 4, 212), 0 0 10px rgb(202, 4, 212);
+  color: rgb(37, 224, 65);
+  box-shadow: 0 0 10px rgb(37, 224, 65), 0 0 10px rgb(37, 224, 65);
   flex-direction: column;
 }
 
