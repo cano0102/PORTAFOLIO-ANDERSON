@@ -750,7 +750,29 @@ Estilos De Descripcion Y Nombres */
   border-top-right-radius: 20px;
 }
 
+.imagen-proyecto2{
+  max-width: 480PX;
+  width: 100%;
+  height: 170px;
+  background-image: url(./img/ChatGPT\ Image\ 7\ may\ 2026\,\ 11_53_59\ p.m..png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
 
+.imagen-proyecto3{
+  max-width: 480PX;
+  width: 100%;
+  height: 170px;
+  background-image: url(./img/Gestor.ganado-foto-perfil.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
 
 
 
@@ -767,7 +789,7 @@ Estilos De Descripcion Y Nombres */
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 17px;
+  gap: 25px;
 }
 .titulo-proyecto{
   max-width: 480PX;
