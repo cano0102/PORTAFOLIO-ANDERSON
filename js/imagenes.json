@@ -11,7 +11,7 @@
     },
   {
   "id": "2",
-  "titulo": "SecureAuth Lab",
+  "titulo": "SecureAuth Lab (BETA)",
   "descripcion": "Sistema de autenticación web desarrollado con Node.js y Express, que permite a los usuarios registrarse e iniciar sesión de forma segura mediante cifrado de contraseñas, tokens JWT y una base de datos PostgreSQL.",
   "tecnologias": [
     "HTML",
