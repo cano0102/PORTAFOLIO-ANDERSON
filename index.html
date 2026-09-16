@@ -4,306 +4,432 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anderson AC</title>
+  <title>Anderson AC · Desarrollador Web</title>
+  <meta name="description"
+    content="Portafolio de Anderson Arboleda Cano, desarrollador web enfocado en backend con JavaScript, Node.js y bases de datos. Conoce mis proyectos y contáctame.">
+  <meta name="theme-color" content="#070b1a">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anderson AC · Desarrollador Web">
+  <meta property="og:description"
+    content="Aprendo, construyo y aporto valor con cada proyecto. Desarrollador web enfocado en backend.">
+  <meta property="og:image" content="./css/img/WhatsApp Image 2025-06-11 at 12.18.11 AM.jpeg">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="./css/img/ChatGPT Image 13 sept 2025, 07_44_23 p.m..png">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <link rel="icon" type="image/png" sizes="192x192" href="./css/img/ChatGPT Image 13 sept 2025, 07_44_23 p.m..png">
 </head>
 
 <body>
-  <div class="contenedor-principal">
-    <div class="inicio">
-      <header>
-        <div class="logo">
-          <h1>PORTAFOLIO</h1>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Ir al inicio">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">Anderson<span class="logo__dot">.</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link is-active">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <span class="nav__indicator" id="navIndicator" aria-hidden="true">
+          <span class="nav__spark"></span>
+          <span class="nav__spark"></span>
+          <span class="nav__spark"></span>
+          <span class="nav__spark"></span>
+        </span>
+
+        <!-- Solo visible en el menú móvil -->
+        <div class="nav__footer">
+          <a href="./files/Anderson-CV-Actualizada.pdf" download="Anderson-CV.pdf" class="btn btn--primary btn--sm">
+            <i class="fa-solid fa-download"></i> Descargar CV
+          </a>
+          <div class="socials socials--sm">
+            <a href="https://github.com/cano0102" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/Anderson cano" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/21______ac" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
         </div>
-        <nav class="menu">
-          <div class="menu-item active">
-            <a href="index.html">Inicio</a>
-            <div class="lightning">
-              <div class="lightning-bolt">
-                <div class="spark"></div>
-                <div class="spark"></div>
-                <div class="spark"></div>
-                <div class="spark"></div>
-                <div class="spark"></div>
+      </nav>
+
+      <div class="header__actions">
+        <a href="./files/Anderson-CV-Actualizada.pdf" download="Anderson-CV.pdf" class="btn btn--ghost btn--sm header__cv">
+          <i class="fa-solid fa-download"></i> CV
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <canvas class="hero__canvas" id="particles" aria-hidden="true"></canvas>
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__badge hero-anim" style="--d:.05s">
+            <span class="pulse-dot"></span> Disponible para nuevos proyectos
+          </span>
+          <p class="hero__greeting hero-anim" style="--d:.15s">Hola, mi nombre es</p>
+          <h1 class="hero__name hero-anim" style="--d:.25s">Anderson <span class="text-gradient">AC</span></h1>
+          <h2 class="hero__role hero-anim" style="--d:.35s">
+            Soy <span class="typed" id="typed"></span><span class="typed-cursor" aria-hidden="true"></span>
+          </h2>
+          <p class="hero__desc hero-anim" style="--d:.45s">
+            Aprendo, construyo y aporto valor con cada proyecto, aplicando buenas prácticas de desarrollo para
+            entregar soluciones tecnológicas eficientes, mantenibles y orientadas a resultados.
+          </p>
+          <div class="hero__actions hero-anim" style="--d:.55s">
+            <a class="btn btn--primary" href="./files/Anderson-CV-Actualizada.pdf" download="Anderson-CV.pdf">
+              <i class="fa-solid fa-download"></i> Descargar CV
+            </a>
+            <a class="btn btn--outline" href="#contacto">
+              Contáctame <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="socials hero-anim" style="--d:.65s">
+            <a href="https://github.com/cano0102" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/Anderson cano" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <button type="button" class="js-copy-email" aria-label="Copiar correo" title="Copiar correo">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/21______ac" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__photo-wrap" id="tilt">
+            <span class="hero__ring hero__ring--1" aria-hidden="true"></span>
+            <span class="hero__ring hero__ring--2" aria-hidden="true"></span>
+            <div class="hero__photo-frame">
+              <img class="hero__photo" src="./css/img/WhatsApp Image 2025-06-11 at 12.18.11 AM.jpeg"
+                alt="Anderson Arboleda Cano" width="360" height="360" fetchpriority="high">
+            </div>
+            <span class="hero__chip hero__chip--1" aria-hidden="true"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="hero__chip hero__chip--2" aria-hidden="true"><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span class="hero__chip hero__chip--3" aria-hidden="true"><i class="fa-solid fa-database"></i> SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#sobre-mi" class="scroll-hint" aria-label="Bajar a la siguiente sección">
+        <span class="scroll-hint__mouse"><span></span></span>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ================= SOBRE MÍ ================= -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Conóceme</span>
+          <h2 class="section__title">Sobre <span class="text-gradient">mí</span></h2>
+          <p class="section__lead">
+            Desarrollador web con enfoque en backend. Me apasiona crear soluciones digitales funcionales,
+            mantenibles y con impacto real.
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <article class="card reveal" style="--i:0">
+            <div class="card__icon"><i class="fa-solid fa-user"></i></div>
+            <h3 class="card__title">¿Quién soy?</h3>
+            <p class="card__text">
+              Soy Anderson, desarrollador web apasionado por crear soluciones digitales funcionales y atractivas.
+              Me gusta aprender constantemente y enfrentar nuevos retos tecnológicos.
+            </p>
+          </article>
+
+          <article class="card reveal" style="--i:1">
+            <div class="card__icon"><i class="fa-solid fa-rocket"></i></div>
+            <h3 class="card__title">Mi objetivo</h3>
+            <p class="card__text">
+              Crecer como desarrollador profesional, participar en proyectos innovadores y aportar soluciones que
+              generen impacto positivo en personas y empresas.
+            </p>
+          </article>
+
+          <article class="card reveal" style="--i:2">
+            <div class="card__icon"><i class="fa-solid fa-face-smile"></i></div>
+            <h3 class="card__title">Mi perfil</h3>
+            <p class="card__text">
+              Me considero una persona responsable, creativa y comprometida. Disfruto trabajar en equipo y siempre
+              busco mejorar mis habilidades técnicas y personales.
+            </p>
+          </article>
+
+          <article class="card reveal" style="--i:3">
+            <div class="card__icon"><i class="fa-solid fa-code"></i></div>
+            <h3 class="card__title">Experiencia</h3>
+            <p class="card__text">
+              He trabajado en proyectos web con HTML, CSS, JavaScript y bases de datos, principalmente en el backend:
+              creando funciones del servidor, conectando la aplicación con la base de datos y manejando el
+              almacenamiento y consulta de la información.
+            </p>
+          </article>
+
+          <article class="card reveal" style="--i:4">
+            <div class="card__icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3 class="card__title">Mis habilidades</h3>
+            <p class="card__text">
+              Destaco por mi capacidad de aprendizaje rápido, resolución de problemas y adaptación a nuevas
+              tecnologías en el desarrollo web.
+            </p>
+          </article>
+
+          <article class="card reveal" style="--i:5">
+            <div class="card__icon"><i class="fa-solid fa-heart"></i></div>
+            <h3 class="card__title">Mis valores</h3>
+            <p class="card__text">
+              Me guío por la responsabilidad, la honestidad y el compromiso. Creo en el trabajo bien hecho y en
+              aportar siempre lo mejor de mí.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HABILIDADES ================= -->
+    <section class="section section--alt" id="habilidades">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Stack</span>
+          <h2 class="section__title">Habilidades <span class="text-gradient">técnicas</span></h2>
+          <p class="section__lead">Tecnologías y herramientas con las que construyo mis proyectos.</p>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill reveal" style="--i:0; --skill-rgb:227,79,38">
+            <div class="skill__icon"><i class="devicon-html5-plain"></i></div>
+            <span class="skill__name">HTML5</span>
+          </div>
+          <div class="skill reveal" style="--i:1; --skill-rgb:21,114,182">
+            <div class="skill__icon"><i class="devicon-css3-plain"></i></div>
+            <span class="skill__name">CSS3</span>
+          </div>
+          <div class="skill reveal" style="--i:2; --skill-rgb:247,223,30">
+            <div class="skill__icon"><i class="devicon-javascript-plain"></i></div>
+            <span class="skill__name">JavaScript</span>
+          </div>
+          <div class="skill reveal" style="--i:3; --skill-rgb:49,120,198">
+            <div class="skill__icon"><i class="devicon-typescript-plain"></i></div>
+            <span class="skill__name">TypeScript</span>
+          </div>
+          <div class="skill reveal" style="--i:4; --skill-rgb:95,160,78">
+            <div class="skill__icon"><i class="devicon-nodejs-plain"></i></div>
+            <span class="skill__name">Node.js</span>
+          </div>
+          <div class="skill reveal" style="--i:5; --skill-rgb:255,255,255">
+            <div class="skill__icon"><i class="devicon-express-original"></i></div>
+            <span class="skill__name">Express</span>
+          </div>
+          <div class="skill reveal" style="--i:6; --skill-rgb:75,139,190">
+            <div class="skill__icon"><i class="devicon-python-plain"></i></div>
+            <span class="skill__name">Python</span>
+          </div>
+          <div class="skill reveal" style="--i:7; --skill-rgb:68,121,161">
+            <div class="skill__icon"><i class="devicon-mysql-plain"></i></div>
+            <span class="skill__name">MySQL</span>
+          </div>
+          <div class="skill reveal" style="--i:8; --skill-rgb:51,103,145">
+            <div class="skill__icon"><i class="devicon-postgresql-plain"></i></div>
+            <span class="skill__name">PostgreSQL</span>
+          </div>
+          <div class="skill reveal" style="--i:9; --skill-rgb:240,80,50">
+            <div class="skill__icon"><i class="devicon-git-plain"></i></div>
+            <span class="skill__name">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYECTOS ================= -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Portafolio</span>
+          <h2 class="section__title">Mis <span class="text-gradient">proyectos</span></h2>
+          <p class="section__lead">
+            Una selección de lo que he construido. Cada proyecto es una oportunidad para aprender y aplicar buenas
+            prácticas.
+          </p>
+        </header>
+
+        <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="section section--alt" id="contacto">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">Contacto</span>
+          <h2 class="section__title">Trabajemos <span class="text-gradient">juntos</span></h2>
+          <p class="section__lead">
+            ¿Tienes una idea o proyecto en mente? Estoy listo para ayudarte a hacerlo realidad. No dudes en
+            contactarme para que trabajemos juntos y logremos grandes resultados.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal reveal--left">
+            <div class="contact-item">
+              <span class="contact-item__icon"><i class="fa-solid fa-user"></i></span>
+              <div>
+                <span class="contact-item__label">Nombre</span>
+                <strong>Anderson Alonso Arboleda Cano</strong>
+              </div>
+            </div>
+
+            <a class="contact-item" href="tel:+573052014333">
+              <span class="contact-item__icon"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <span class="contact-item__label">Teléfono</span>
+                <strong>+57 305 201 43 33</strong>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square contact-item__action"></i>
+            </a>
+
+            <button type="button" class="contact-item js-copy-email" title="Copiar correo">
+              <span class="contact-item__icon"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <span class="contact-item__label">Correo</span>
+                <strong>canoanderson201@gmail.com</strong>
+              </div>
+              <i class="fa-regular fa-copy contact-item__action"></i>
+            </button>
+
+            <div class="contact-item">
+              <span class="contact-item__icon"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <span class="contact-item__label">Ubicación</span>
+                <strong>Colombia</strong>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <p>Sígueme en</p>
+              <div class="socials">
+                <a href="https://github.com/cano0102" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/Anderson cano" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/21______ac" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
               </div>
             </div>
           </div>
-          <div class="menu-item">
-            <a href="index.html#titulo">Sobre mi</a>
-          </div>
-          <div class="menu-item">
-            <a href="index.html#Tecnicass">Habilidades</a>
-          </div>
-          <div class="menu-item">
-            <a href="index.html#proyecto">Proyectos</a>
-          </div>
-          <div class="menu-item">
-            <a href="index.html#info2t">Contacto</a>
-          </div>
-        </nav>
-      </header>
 
-      <section class="presentacion">
-        <div class="foto-anderson">
-          <img class="andy" src="./css/img/WhatsApp Image 2025-06-11 at 12.18.11 AM.jpeg" alt="Foto de Anderson">
-        </div>
-        <div class="DescripcionYNombres">
-          <h2>Hola, mi nombre es</h2>
-          <h2 class="nombre">ANDERSON AC</h2>
-          <p class="parrafoDescripcionYNombres">
-             Aprendo, construyo y aporto valor con cada proyecto, aplicando buenas prácticas de desarrollo para entregar soluciones tecnológicas eficientes, mantenibles y orientadas a resultados
-          </p>
-          <section class="redes-sociales">
-            <div class="iconos-redes">
-              <a href="https://github.com/cano0102" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://linkedin.com/in/Anderson cano" target="_blank" rel="noopener" aria-label="LinkedIn"
-                title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a class="gmail">
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="https://instagram.com/21______ac" target="_blank" rel="noopener" aria-label="Instagram"
-                title="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
+          <form class="contact-form reveal reveal--right" action="https://formspree.io/f/xldlnork" method="POST"
+            id="contactForm" novalidate>
+            <div class="field">
+              <input type="text" id="nombre" name="nombre" placeholder=" " required autocomplete="name">
+              <label for="nombre">Nombre</label>
             </div>
-          </section>
+            <div class="field">
+              <input type="email" id="correo" name="correo" placeholder=" " required autocomplete="email">
+              <label for="correo">Correo electrónico</label>
+            </div>
+            <div class="field">
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder=" " required></textarea>
+              <label for="mensaje">Escribe tu mensaje aquí...</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">
+              <span>Enviar mensaje</span> <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
-        <section class="cv-contacto">
-            <a class="boton" href="./files/Anderson-CV-Actualizada.pdf" download="Anderson-CV.pdf">Descargar CV</a>
-          <a class="boton-outlined" href="index.html#info2t">Contáctame</a>
-        </section>
-      </section>
-      <div class="toast">Correo Copiado correctamente✅</div>
-    </div>
-    <section class="sobremi">
-      <div class="title">
-        <h2 id="titulo">Sobre mi</h2>
-      </div>
-      <div class="info-cubos">
-
-  <!-- QUIÉN SOY -->
-  <div class="quien-soy">
-    <div class="icono-sobremi">
-      <i class="bi bi-person-circle"></i>
-      <h2 class="titulo-sobremi">¿Quién soy?</h2>
-    </div>
-    <div class="parrafo-sobremi">
-      <p>
-        Soy Anderson, desarrollador web apasionado por crear soluciones digitales funcionales y atractivas.
-        Me gusta aprender constantemente y enfrentar nuevos retos tecnológicos.
-      </p>
-    </div>
-  </div>
-
-  <!-- OBJETIVO -->
-  <div class="mi-objetivo">
-    <div class="icono-sobremi">
-      <i class="bi bi-rocket-takeoff-fill"></i>
-      <h2 class="titulo-sobremi">Mi objetivo</h2>
-    </div>
-    <div class="parrafo-sobremi">
-      <p>
-        Mi objetivo es crecer como desarrollador profesional, participar en proyectos innovadores
-        y aportar soluciones que generen impacto positivo en personas y empresas.
-      </p>
-    </div>
-  </div>
-  
-
-  <!-- PERFIL -->
-  <div class="mi-perfil">
-    <div class="icono-sobremi">
-      <i class="bi bi-emoji-smile-fill"></i>
-      <h2 class="titulo-sobremi">Mi perfil</h2>
-    </div>
-    <div class="parrafo-sobremi">
-      <p>
-        Me considero una persona responsable, creativa y comprometida.
-        Disfruto trabajar en equipo y siempre busco mejorar mis habilidades técnicas y personales.
-      </p>
-    </div>
-  </div>
-
-  <!-- EXPERIENCIA -->
-  <div class="mi-experiencia">
-    <div class="icono-sobremi">
-      <i class="bi bi-code-slash"></i>
-      <h2 class="titulo-sobremi">Experiencia</h2>
-    </div>
-    <div class="parrafo-sobremi">
-      <p>
-       He trabajado en proyectos web utilizando HTML, CSS, JavaScript y bases de datos, principalmente en el backend, creando funciones básicas del servidor, conectando la aplicación con la base de datos y manejando el almacenamiento y consulta de la información.
-      </p>
-    </div>
-  </div>
-
-  <!-- HABILIDADES -->
-  <div class="mis-habilidades">
-    <div class="icono-sobremi">
-      <i class="bi bi-lightning-charge-fill"></i>
-      <h2 class="titulo-sobremi">Mis habilidades</h2>
-    </div>
-    <div class="parrafo-sobremi">
-      <p>
-        Destaco por mi capacidad de aprendizaje rápido, resolución de problemas
-        y adaptación a nuevas tecnologías en el desarrollo web.
-      </p>
-    </div>
-  </div>
-
-  <!-- VALORES -->
-  <div class="mis-valores">
-    <div class="icono-sobremi">
-      <i class="bi bi-heart-fill"></i>
-      <h2 class="titulo-sobremi">Mis valores</h2>
-    </div>
-    <div class="parrafo-sobremi">
-      <p>
-        Me guío por la responsabilidad, la honestidad y el compromiso.
-        Creo en el trabajo bien hecho y en aportar siempre lo mejor de mí.
-      </p>
-    </div>
-  </div>
-
-</div>
-    <section class="principal-habilidades">
-      <div class="contenedor-habilidades">
-        <h2 id="Tecnicass">Mis Habilidades Tecnicas</h2>
-      </div>
-      <div class="contenedor-iconos">
-
-        <div class="iconos-javaScript">
-          <i class="fa-brands fa-js"></i>
-          <h2 class="texto-iconos">JavaScript</h2>
-        </div>
-
-        <div class="iconos-baseDatos">
-          <i class="fa-solid fa-database"></i>
-          <h2 class="texto-iconos">MySQL</h2>
-        </div>
-        <div class="iconos-type">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M112.8 96L527.2 96C536.5 96 544 103.5 544 112.8L544 527.2C544 536.5 536.5 544 527.2 544L112.8 544C103.5 544 96 536.5 96 527.2L96 112.8C96 103.5 103.5 96 112.8 96zM345 334.3L345 297.6L185.6 297.6L185.6 334.3L242.5 334.3L242.5 497.9L287.8 497.9L287.8 334.3L345 334.3zM363.1 493.6C370.4 497.3 379 500.1 389 502C399 503.9 409.5 504.8 420.5 504.8C431.3 504.8 441.5 503.8 451.2 501.7C460.9 499.6 469.4 496.3 476.7 491.6C484 486.9 489.8 480.7 494.1 473.2C498.4 465.7 500.5 456.2 500.5 445C500.5 436.9 499.3 429.8 496.8 423.7C494.3 417.6 490.9 412.2 486.3 407.4C481.7 402.6 476.2 398.4 469.8 394.6C463.4 390.8 456.1 387.3 448.1 383.9C442.2 381.5 436.9 379.1 432.2 376.8C427.5 374.5 423.5 372.2 420.3 369.8C417.1 367.4 414.5 364.9 412.7 362.3C410.9 359.7 410 356.6 410 353.3C410 350.2 410.8 347.5 412.4 345C414 342.5 416.2 340.4 419.1 338.6C422 336.8 425.6 335.5 429.8 334.5C434 333.5 438.7 333 443.9 333C447.6 333 451.6 333.3 455.8 333.8C460 334.3 464.2 335.2 468.4 336.4C472.6 337.6 476.7 339 480.7 340.8C484.7 342.6 488.4 344.6 491.7 346.9L491.7 305.1C484.9 302.5 477.4 300.6 469.3 299.3C461.2 298 451.9 297.4 441.4 297.4C430.7 297.4 420.6 298.5 411 300.8C401.4 303.1 393 306.6 385.8 311.5C378.6 316.4 372.8 322.5 368.6 330C364.4 337.5 362.3 346.5 362.3 356.9C362.3 370.2 366.2 381.6 373.9 391C381.6 400.4 393.4 408.4 409.1 414.9C415.3 417.4 421 419.9 426.4 422.3C431.8 424.7 436.4 427.2 440.2 429.8C444 432.4 447.2 435.2 449.4 438.3C451.6 441.4 452.8 444.9 452.8 448.8C452.8 451.7 452.1 454.4 450.7 456.8C449.3 459.2 447.2 461.4 444.3 463.2C441.4 465 437.9 466.4 433.6 467.5C429.3 468.6 424.3 469 418.6 469C408.9 469 399.2 467.3 389.7 463.9C380.2 460.5 371.3 455.4 363.1 448.6L363.1 493.3z"/></svg>   
-          <h2 class="texto-iconos">TypeScript</h2>
-        </div>
-        <div class="iconos-git">
-          <i class="fa-brands fa-git-alt"></i>
-          <h2 class="texto-iconos">Git</h2>
-        </div>
-        <div class="iconos-python">
-          <i class="fa-brands fa-python"></i>
-          <h2 class="texto-iconos">Python</h2>
-        </div>
-        <div class="iconos-node">
-          <i class="fa-brands fa-node"></i>
-          <h2 class="texto-iconos">Node.js</h2>
-        </div>
-
       </div>
     </section>
-    <section class="sesion-proyectos">
-      <div class="titulo-proyectos">
-        <h2 id="proyecto">Proyectos</h2>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo" aria-label="Ir al inicio">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">Anderson<span class="logo__dot">.</span></span>
+      </a>
+      <ul class="footer__nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="socials socials--sm">
+        <a href="https://github.com/cano0102" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/Anderson cano" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://instagram.com/21______ac" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
       </div>
-    </section>
-    <section class="sesion-contacto">
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Anderson AC. Todos los derechos reservados.</p>
+      <p>Hecho con <i class="fa-solid fa-heart" aria-label="amor"></i> y JavaScript</p>
+    </div>
+  </footer>
 
-      <div class="trabajemos-juntos">
+  <button class="back-top" id="backTop" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-        <div class="titulo-info-contacto">
-          <h2 id="info2t">Información de Contacto</h2>
-        </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-        <div class="informacion-de-contacto">
-
-
-          <div class="info-contacto">
-            <div class="contact-item">
-              <i class="fas fa-user"></i>
-              <p>Anderson Alonso Arboleda Cano</p>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <p>+57 305 201 43 33</p>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <p>canoanderson201@gmail.com</p>
-            </div>
-
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Colombia</p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class="redes-sociales-conctacto">
-          <a href="https://github.com/cano0102" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/Anderson cano" target="_blank" rel="noopener" aria-label="LinkedIn"
-            title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://instagram.com/21______ac" target="_blank" rel="noopener" aria-label="Instagram"
-            title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-
-
-      </div>
-      <div class="formulario">
-        <div class="titulo-contacto">
-          <h2 id="Contacto-titulo">TRABAJEMOS JUNTOS</h2>
-        </div>
-
-        <div class="parrafo-contacto">
-          <p>¿Tienes una idea o proyecto en mente? Estoy listo para ayudarte a hacerlo realidad. No dudes en contactarme
-            para que trabajemos juntos y logremos grandes resultados.</p>
-        </div>
-
-
-        <form action="https://formspree.io/f/xldlnork" method="POST" class="Formulario-envio">
-
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-
-
-          <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-          <textarea id="mensaje" name="mensaje" rows="5" cols="30" placeholder="Escribe tu mensaje aquí..."
-            required></textarea><br>
-          <button type="submit" class="boton-formulario">Enviar mensaje</button>
-        </form>
-      </div>
-
-    </section>
-    <footer>
-
-    </footer>
-  </div>
-  <script src="./js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
+  <script src="./js/main.js" defer></script>
 </body>
 
 </html>

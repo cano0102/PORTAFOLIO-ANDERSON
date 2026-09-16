@@ -1,32 +1,22 @@
 {
   "imagenes": [
     {
-
-      "id" : "1",
-      "titulo" : "Etherium Game ",
-    "descripcion": "(Primera version) Videojuego RPG por turnos desarrollado por un grupo de estudiantes para participar en una feria académica, donde los jugadores exploran mapas, combaten enemigos y mejoran sus personajes en un mundo de fantasía.",
-      "tecnologias": ["CSS","JavaScript","HTML"],
-      "link" :"https://etherium-game.vercel.app/",
-      "linkVerCodigo" : "https://github.com/BrandonAlexisDev22/Etherium-Game"
+      "id": "1",
+      "titulo": "Etherium Game",
+      "descripcion": "(Primera versión) Videojuego RPG por turnos desarrollado por un grupo de estudiantes para participar en una feria académica, donde los jugadores exploran mapas, combaten enemigos y mejoran sus personajes en un mundo de fantasía.",
+      "imagen": "./css/img/etherium.png",
+      "tecnologias": ["HTML", "CSS", "JavaScript"],
+      "link": "https://etherium-game.vercel.app/",
+      "linkVerCodigo": "https://github.com/BrandonAlexisDev22/Etherium-Game"
     },
-  {
-  "id": "2",
-  "titulo": "SecureAuth Lab (BETA)",
-  "descripcion": "Sistema de autenticación web desarrollado con Node.js y Express, que permite a los usuarios registrarse e iniciar sesión de forma segura mediante cifrado de contraseñas, tokens JWT y una base de datos PostgreSQL.",
-  "tecnologias": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Node.js",
-    "Express",
-    "PostgreSQL",
-    "JWT",
-    "Bcrypt"
-  ],
-  "link": "https://secure-auth-lab-qt7b.vercel.app/",
-  "linkVerCodigo": "https://github.com/cano0102/SecureAuth-Lab"
-}
-
+    {
+      "id": "2",
+      "titulo": "SecureAuth Lab (BETA)",
+      "descripcion": "Sistema de autenticación web desarrollado con Node.js y Express, que permite a los usuarios registrarse e iniciar sesión de forma segura mediante cifrado de contraseñas, tokens JWT y una base de datos PostgreSQL.",
+      "imagen": "./css/img/Captura de pantalla 2026-07-29 142813.png",
+      "tecnologias": ["HTML", "CSS", "JavaScript", "Node.js", "Express", "PostgreSQL", "JWT", "Bcrypt"],
+      "link": "https://secure-auth-lab-qt7b.vercel.app/",
+      "linkVerCodigo": "https://github.com/cano0102/SecureAuth-Lab"
+    }
   ]
 }
-
